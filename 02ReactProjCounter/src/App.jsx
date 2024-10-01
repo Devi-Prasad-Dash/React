@@ -7,8 +7,12 @@ function App() {
   let [count, setcount] = useState(0)
 
   const addvalue = () => {
-    if (count < 20) setcount(count+1)
-  } 
+    if (count < 20) {
+      setcount(prevCount => prevCount + 1)
+      setcount(prevCount => prevCount + 1)
+    }
+  }
+
   const reduceValue = () => {
     if (count > 0) setcount(count-1)
   }
